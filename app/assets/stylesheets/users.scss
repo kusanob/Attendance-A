@@ -12,7 +12,6 @@
 /* ユーザー情報下ボタン */
 
 .btn-users-show {
-  margin-top: -10px;
   margin-bottom: 10px;
 }
 
@@ -55,6 +54,10 @@
   }  
 }
 
+.index-table{
+  table-layout: fixed;
+  text-align: center;
+}
 /* 基本情報編集 */
 
 .label-basic-info {
@@ -65,3 +68,8 @@
   margin: 15px 0;
   width: 20%;
 }
+
+.btn-csv{
+  margin-top: 10px;
+}
+

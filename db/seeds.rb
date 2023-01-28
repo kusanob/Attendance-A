@@ -8,11 +8,29 @@
 
 # coding: utf-8
 
-User.create!(name: "Sample User",
-             email: "sample@email.com",
+User.create!(name: "管理者",
+             email: "admin@email.com",
              password: "password",
              password_confirmation: "password",
+             employee_number: "111",
+             uid: "11",
              admin: true)
+             
+User.create!(name: "上長A",
+             email: "superior_a@email.com",
+             password: "password",
+             password_confirmation: "password",
+             employee_number: "112",
+             uid: "12",
+             superior: true)
+
+User.create!(name: "上長B",
+             email: "superior_b@email.com",
+             password: "password",
+             password_confirmation: "password",
+             employee_number: "113",
+             uid: "13",
+             superior: true)
 
 60.times do |n|
   name  = Faker::Name.name
@@ -21,5 +39,7 @@ User.create!(name: "Sample User",
   User.create!(name: name,
                email: email,
                password: password,
-               password_confirmation: password)
+               password_confirmation: password,
+               employee_number: "11#{n+4}",
+               uid: "1#{n+4}",)
 end

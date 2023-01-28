@@ -1,20 +1,40 @@
-<%= form_with(model: @user, local: true) do |f| %>
-  <%= render 'shared/error_messages', object: @user %>
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <button type="button" class="btn btn-lg btn-primary" data-toggle="collapse" data-parent="#accordion" href="#collapse">
+          編集
+        </button>
+      </h4>
+    </div>
+    <div id="collapse" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <%= form_with(model: @user, local: true) do |f| %>
 
-  <%= f.label :name, class: "label-#{yield(:class_text)}" %>
+  <%= f.label :name %>
   <%= f.text_field :name, class: "form-control" %>
 
-  <%= f.label :email, class: "label-#{yield(:class_text)}" %>
+  <%= f.label :email %>
   <%= f.email_field :email, class: "form-control" %>
   
-  <%= f.label :department, class: "label-#{yield(:class_text)}" %>
-  <%= f.text_field :department, class: "form-control" %>
+  <%= f.label :affiliation %>
+  <%= f.text_field :affiliation, class: "form-control" %>
 
-  <%= f.label :password, class: "label-#{yield(:class_text)}" %>
+  <%= f.label :password %>
   <%= f.password_field :password, class: "form-control" %>
 
-  <%= f.label :password_confirmation, class: "label-#{yield(:class_text)}" %>
+  <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: "form-control" %>
 
-  <%= f.submit yield(:button_text), class: "btn btn-primary btn-block btn-#{yield(:class_text)}" %>
+  <%= f.submit yield(:button_text), class: "btn btn-primary btn-block" %>
 <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bace_number: 1
+  bace_name: MyString
+  bace_type: MyString
+
+two:
+  bace_number: 1
+  bace_name: MyString
+  bace_type: MyString
